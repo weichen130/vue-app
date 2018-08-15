@@ -8,13 +8,15 @@
       </Swipe>
       <article>Hello {{getName}}</article>
       <router-link :to="{name:'user'}">回退User页面</router-link>
+      <vBottom></vBottom>
     </section>
 </template>
 
 <script>
   import {Button,Swipe, SwipeItem} from 'vant';
   import { mapState } from 'vuex';
-  import vTitle from '@/components/vTitle'
+  import vTitle from '@/components/vTitle';
+  import vBottom from '@/components/vBottom';
     export default {
       name: "home",
       components: {
@@ -42,6 +44,7 @@
       },
       components: {
         vTitle,
+        vBottom,
         Swipe,
         SwipeItem
       }

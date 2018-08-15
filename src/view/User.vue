@@ -5,6 +5,7 @@
     <article><Field v-model="user.name" placeholder="请输入名称" /></article>
     <article><Button @click="updateUserName()">修改姓名</Button></article>
     <router-link :to="{name:'home'}">跳转Home页面</router-link>
+    <vBottom></vBottom>
   </section>
 </template>
 
@@ -12,6 +13,7 @@
     import { Field,Button,NavBar } from 'vant';
     import { mapState } from 'vuex';
     import vTitle from '@/components/vTitle'
+    import vBottom from '@/components/vBottom'
     import router from '../router'
     export default {
         name: "user",
@@ -30,7 +32,8 @@
       components: {
           Field,
           Button,
-          vTitle
+          vTitle,
+          vBottom
       },
       methods: {
           updateUserName(){
