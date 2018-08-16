@@ -1,14 +1,12 @@
 <template>
   <section>
     <vTitle></vTitle>
-    <article>Hello {{getName}}</article>
-    <article><Field v-model="user.name" placeholder="请输入名称" /></article>
-    <article><Button @click="updateUserName()">修改姓名</Button></article>
-    <router-link :to="{name:'home'}">跳转Home页面</router-link>
+    <article>姓名： {{getUser.name}}</article>
+    <article>性别： {{getUser.sex}}</article>
+    <article>爱好： {{getUser.interest}}</article>
     <vBottom></vBottom>
   </section>
 </template>
-
 <script>
     import { Field,Button,NavBar } from 'vant';
     import { mapState } from 'vuex';
@@ -26,7 +24,7 @@
         },
       computed: {
         ...mapState({
-          getName:state=>state.user.name
+          getUser:state=>state.user
         })
       },
       components: {

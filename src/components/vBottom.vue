@@ -1,9 +1,9 @@
 <template>
   <section>
     <Tabbar>
-      <TabbarItem  icon="chat" dot></TabbarItem>
-      <TabbarItem  icon="contact"></TabbarItem>
-      <TabbarItem  icon="setting"></TabbarItem>
+      <TabbarItem @click="linkToHome"  icon="chat" dot></TabbarItem>
+      <TabbarItem @click="linkToUser"  icon="contact"></TabbarItem>
+      <TabbarItem @click="linkToSetting"  icon="setting"></TabbarItem>
     </Tabbar>
   </section>
 </template>
@@ -20,6 +20,17 @@
         components: {
           Tabbar,
           TabbarItem
+        },
+        methods: {
+          linkToHome(){
+            this.$router.push({path:"/home"});
+          },
+          linkToUser(){
+            this.$router.push({path:"/user"});
+          },
+          linkToSetting(){
+            this.$router.push({path:"/setting"});
+          }
         }
 
     }

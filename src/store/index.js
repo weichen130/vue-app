@@ -8,7 +8,7 @@ import mutations from'./mutations';
 
 import home from './modules/home';
 import user from './modules/user';
-/*import my from './modules/my';*/
+import setting from './modules/setting'
 
 Vue.use(Vuex);
 
@@ -19,7 +19,8 @@ export default new Vuex.Store({
   mutations,
   modules:{
     home,
-    user
+    user,
+    setting
   }
 })
 
