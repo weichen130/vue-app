@@ -2,8 +2,8 @@
   <section>
     <vTitle></vTitle>
     <article>姓名： {{getUser.name}}</article>
-    <article>性别： {{getUser.sex}}</article>
-    <article>爱好： {{getUser.interest}}</article>
+    <article>性别： {{getUser.sex=='0'?'男':getUser.sex=='1'?'女':''}}</article>
+    <article>爱好： <span v-for="(item,index) of getUser.interest" :key="index">{{item}}<span v-if="index<getUser.interest.length-1">、</span>  </span></article>
     <vBottom></vBottom>
   </section>
 </template>

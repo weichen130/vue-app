@@ -7,11 +7,10 @@ import store from './store'
 
 Vue.config.productionTip = false
 
-import { Lazyload ,Icon} from 'vant';
+import { Lazyload ,Icon,Row,Col} from 'vant';
 
 // options 为可选参数，无则不传
-Vue.use(Lazyload);
-Vue.use(Icon);
+Vue.use(Lazyload).use(Icon).use(Row).use(Col);
 /**
  *  路由发生变化修改页面title
  */

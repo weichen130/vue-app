@@ -6,7 +6,7 @@
           <img  v-lazy="item">
         </SwipeItem>
       </Swipe>
-      <router-link :to="{name:'user'}">回退User页面</router-link>
+      <!--<router-link :to="{name:'user'}">回退User页面</router-link>-->
       <vBottom></vBottom>
     </section>
 </template>

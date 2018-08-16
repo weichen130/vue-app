@@ -8,7 +8,9 @@ import {
 } from '../types';
 
 const state ={
-  name:"user-word"
+  name:"",
+  sex:"",
+  interest:[]
 }
 
 const getters ={
@@ -17,14 +19,16 @@ const getters ={
 
 const actions ={
   [SET_USER_INFO]({commit,dispatch,state,rootState},params){
-    console.log(params);
     commit(UPDTAE_USER_INFO,params);
   }
 }
 
 const mutations ={
   [UPDTAE_USER_INFO](state,params){
-    state.name=params.name||"";
+    state.name=params.name;
+    state.sex=params.sex;
+    state.interest=params.interest;
+    console.log(state);
   }
 }
 
