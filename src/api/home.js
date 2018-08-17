@@ -1,7 +1,7 @@
 
 export const getUserInfo = (params) =>{
   return {
-    name"getUserInfo",
+    name:"getUserInfo",
     params:JSON.stringift(params)
   }
 }
