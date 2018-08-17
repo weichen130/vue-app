@@ -20,7 +20,7 @@
           <CheckboxGroup class="checkbox" v-model="fromData.interest">
             <Checkbox
               v-for="(item, index) in list"
-              :key="item"
+              :key="index"
               :name="item"
             >
               {{ item }}
